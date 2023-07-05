@@ -1,0 +1,24 @@
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Phone</th>
+        <th>Img</th>
+        <th>Action</th>
+    </tr>
+    <% for(let i in record)
+        {%>
+            <tr>
+                <td><%= record[i].S_name %></td>
+                <td><%= record[i].S_email %></td>
+                <td><%= record[i].S_password %></td>
+                <td><%= record[i].S_phone %></td>
+                <td><img src="<%= record[i].avatar %>" width="100"></td>
+                <td><a href="/admin/deletedata?id=<%= record[i].id %>">Delete</a>  ||  <a href="/admin/editdata/<%= record[i].id %>">EditData</a></td>
+            </tr>
+        <%} 
+    %>
+</table>
+
+<a href="/admin">Adddata</a>

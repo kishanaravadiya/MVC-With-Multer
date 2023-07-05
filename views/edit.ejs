@@ -1,0 +1,31 @@
+<form action="/admin/upadateData" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="edit_id" value="<%= single.id %>">
+    <table border="1">
+        <tr>
+            <td>Name : </td>
+            <td><input type="text" name="name" value="<%= single.S_name %>"></td>
+        </tr>
+        <tr>
+            <td>Email : </td>
+            <td><input type="email" name="email" value="<%= single.S_email %>"></td>
+        </tr>
+        <tr>
+            <td>Password : </td>
+            <td><input type="password" name="password" value="<%= single.S_password %>"></td>
+        </tr>
+        <tr>
+            <td>Phone : </td>
+            <td><input type="number" name="phone" value="<%= single.S_phone %>"></td>
+        </tr>
+        <tr>
+            <td>Photo : </td>
+            <td><input type="file" name="avatar"><img src="<%= single.avatar %>" width="100"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit"></td>
+        </tr>
+    </table>
+</form>
+
+<a href="/admin/viewdata">Views Data</a>
